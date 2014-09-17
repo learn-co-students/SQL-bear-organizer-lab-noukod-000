@@ -46,7 +46,7 @@ Input the following 16 bears (you can make up details about them):
 * Mickey
 * Freckles 
 * Quincy 
-* [unnamed] (the bear that killed Tim didn't have a name; look up how to create a row where one of the columns doesn't have a value)
+* [unnamed] (the bear that killed Tim didn't have a name; look up how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
 
