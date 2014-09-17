@@ -29,7 +29,7 @@ Use this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_
 
 ## Part 2: `INSERT`
 
-Input the following 15 bears (you can make up details about them):
+Input the following 16 bears (you can make up details about them):
 
 * Mr. Chocolate 
 * Rowdy 
@@ -46,6 +46,7 @@ Input the following 15 bears (you can make up details about them):
 * Mickey
 * Freckles 
 * Quincy 
+* [unnamed] (the bear that killed Tim didn't have a name; look up how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
 
