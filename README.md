@@ -15,7 +15,15 @@ resources: 1
 
 ## Part 1: `CREATE TABLE`
 
-Get the tests in `spec/create_spec.rb` to pass.
+Get the tests in `spec/create_spec.rb` to pass. Your `CREATE` statement should look something like this:
+
+```sql
+CREATE TABLE bears (
+  //columns here
+);
+```
+
+Use this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp) to determine the datatypes of each column.
 
 ## Part 2: `INSERT`
 
