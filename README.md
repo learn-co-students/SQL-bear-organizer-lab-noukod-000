@@ -8,6 +8,8 @@ resources: 1
 
 [Timothy Treadwell](http://en.wikipedia.org/wiki/Timothy_Treadwell) has a lot on his plate protecting the bears of the Katmai National Park in Alaska. Help him keep track of all of his bear friends using SQL.
 
+![timothy-treadwell](http://www.amissingamerica.com/wp-content/uploads/2012/04/tim_treadwell_large.jpg)
+
 ## Objectives
 
 1. Become familiar with creating tables with columns of various datatypes
@@ -27,8 +29,23 @@ Use this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_
 
 ## Part 2: `INSERT`
 
-Input the following 10 bears:
-*
+Input the following 15 bears (you can make up details about them):
+
+* Mr. Chocolate 
+* Rowdy 
+* Downey 
+* Tabitha 
+* Sergeant Brown
+* Melissa 
+* Grinch
+* Wendy
+* Saturn
+* Booble
+* Ed 
+* Olie 
+* Mickey
+* Freckles 
+* Quincy 
 
 ## Part 3: `SELECT`
 
