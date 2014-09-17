@@ -1,7 +1,7 @@
 ---
 tags: sql, introductory, select, insert, create
 languages: sql
-resources: 
+resources: 1
 ---
 
 # SQL Bear Organizer
@@ -10,13 +10,22 @@ resources:
 
 ## Objectives
 
-1. Become familiar with creating tables with columns of various types
+1. Become familiar with creating tables with columns of various datatypes
 2. Learn to write complex and useful select queries
 
 ## Part 1: `CREATE TABLE`
 
+Get the tests in `spec/create_spec.rb` to pass.
+
 ## Part 2: `INSERT`
+
+Input the following 10 bears:
+*
 
 ## Part 3: `SELECT`
 
+Get the tests in `spec/querying_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above.
+
 ## Resources
+
+[SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp)
