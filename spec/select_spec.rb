@@ -18,7 +18,7 @@ describe 'querying the bears table' do
   end
 
   it 'selects all of the bears names and ages that are alive and order them from youngest to oldest' do 
-    expect(@db.execute('SELECT bears.name, bears.age FROM bears WHERE bears.alive="TRUE" ORDER BY bears.age ASC;')).to eq([
+    expect(@db.execute('SELECT bears.name, bears.age FROM bears WHERE bears.alive=1 ORDER BY bears.age ASC;')).to eq([
       ["Grinch", 2],["Ed", 8],["Booble", 9],["Rowdy", 10],["Mickey", 10],["Downey", 12],["Melissa", 13],["Olie", 16],["Sergeant Brown", 19],["Mr. Chocolate", 20],["Quincy", 26]])
   end
 
@@ -39,6 +39,6 @@ describe 'querying the bears table' do
   end
 
   it 'selects the bear that killed Tim' do 
-    expect(@db.execute("SELECT * FROM bears WHERE bears.name IS NULL")).to eq([[16, nil, 20, "M", "dark brown", "agressive", "FALSE"]])
+    expect(@db.execute("SELECT * FROM bears WHERE bears.name IS NULL")).to eq([[16, nil, 20, "M", "dark brown", "agressive", 0]])
   end
 end
