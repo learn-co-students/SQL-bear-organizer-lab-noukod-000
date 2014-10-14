@@ -8,11 +8,7 @@ resources: 1
 
 [Timothy Treadwell](http://en.wikipedia.org/wiki/Timothy_Treadwell) has a lot on his plate protecting the bears of the Katmai National Park in Alaska. Help him keep track of all of his bear friends using SQL.
 
-<<<<<<< HEAD
-![timothy-treadwell](http://www.amissingamerica.com/wp-content/uploads/2012/04/tim_treadwell_large.jpg)
-=======
 ![timothy-treadwell](http://m2.paperblog.com/i/74/746121/lagghiacciante-morte-delluomo-grizzly-sbranat-L-rr7aep.jpeg)
->>>>>>> master
 
 ## Objectives
 
@@ -29,9 +25,6 @@ CREATE TABLE bears (
 );
 ```
 
-<<<<<<< HEAD
-Use this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp) to determine the datatypes of each column.
-=======
 Your columns should be the following types:
 
 |column | type  |
@@ -44,7 +37,6 @@ Your columns should be the following types:
 |alive  |boolean|
 
 Check out this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp) to learn more about datatypes.
->>>>>>> master
 
 ## Part 2: `INSERT`
 
@@ -65,17 +57,6 @@ Input the following 16 bears (you can make up details about them):
 * Mickey
 * Freckles 
 * Quincy 
-<<<<<<< HEAD
-* [unnamed] (the bear that killed Tim didn't have a name; look up how to create a record that doesn't have one value)
-
-## Part 3: `SELECT`
-
-Get the tests in `spec/querying_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above.
-
-## Resources
-
-[SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp)
-=======
 * unnamed (the bear that killed Tim didn't have a name; look up how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
@@ -85,4 +66,3 @@ Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the 
 ## Resources
 
 [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp)
->>>>>>> master
