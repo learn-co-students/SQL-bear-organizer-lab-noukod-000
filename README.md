@@ -25,7 +25,18 @@ CREATE TABLE bears (
 );
 ```
 
-Use this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp) to determine the datatypes of each column.
+Your columns should be the following types:
+
+|column | type  |
+|-------|-------|
+|name   |text   |
+|age    |integer|
+|gender |char(1)|
+|color  |text   |
+|temperment|text|
+|alive  |boolean|
+
+Check out this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp) to learn more about datatypes.
 
 ## Part 2: `INSERT`
 
