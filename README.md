@@ -31,7 +31,7 @@ Your columns should be the following types:
 |-------|-------|
 |name   |text   |
 |age    |integer|
-|gender |char(1)|
+|gender |char(1)(The choices would be "M" or "F")|
 |color  |text   |
 |temperment|text|
 |alive  |boolean|
