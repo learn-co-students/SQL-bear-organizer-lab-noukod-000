@@ -39,6 +39,6 @@ describe 'querying the bears table' do
   end
 
   it 'selects the bear that killed Tim' do 
-    expect(@db.execute("")).to eq([[16, nil, 20, "M", "dark brown", "agressive", "FALSE"]])
+    expect(@db.execute("")).to eq([[16, nil, 20, "M", "dark brown", "agressive", 0]])
   end
 end

@@ -36,7 +36,7 @@ Your columns should be the following types:
 |temperment|text|
 |alive  |boolean|
 
-Check out this resource on [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp) to learn more about datatypes.
+Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determine what your insert values are going to be. Be sure to pay attention to how booleans are expressed in SQLite3.
 
 ## Part 2: `INSERT`
 
