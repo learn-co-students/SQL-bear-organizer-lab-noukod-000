@@ -15,6 +15,32 @@ resources: 1
 1. Become familiar with creating tables with columns of various datatypes
 2. Learn to write complex and useful select queries
 
+## Lab Structure
+
+This lab might seem a bit different than what you've seen before. Take a look at the file structure:
+
+```bash
+├── Gemfile
+├── README.md
+├── bin
+│   ├── environment.rb # requires bundler and files
+│   ├── run.rb # instantiates the SQLRunner class in the below file
+│   └── sql_runner.rb # holds a class that handles executing your .sql files
+├── lib
+│   ├── create.sql # where you create your schema
+│   ├── decoded_data.sql # this file we're using to run the tests
+│   └── insert.sql # where you insert your data
+└── spec # all your specs
+    ├── create_spec.rb
+    ├── insert_spec.rb
+    ├── select_spec.rb
+    └── spec_helper.rb
+```
+
+### A Note on Testing
+
+In the `select_spec.rb` spec, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes. 
+
 ## Part 1: `CREATE TABLE`
 
 Get the tests in `spec/create_spec.rb` to pass. Your `CREATE` statement should look something like this:
