@@ -50,7 +50,7 @@ Input the following 16 bears (you can make up details about them):
 
 ## Part 3: `SELECT`
 
-Get the tests in `spec/querying_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above.
+Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above. Change the specs themselves (where there are empty quotes) to include your querying statements.
 
 ## Resources
 
