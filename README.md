@@ -30,10 +30,10 @@ This lab might seem a bit different than what you've seen before. Take a look at
 │   ├── create.sql # where you create your schema
 │   ├── decoded_data.sql # this file we're using to run the tests
 │   └── insert.sql # where you insert your data
-└── spec # all your specs
-    ├── create_spec.rb
-    ├── insert_spec.rb
-    ├── select_spec.rb
+└── spec # all the specs
+    ├── create_spec.rb # this tests your creat.sql file
+    ├── insert_spec.rb # this tests your insert.sql file
+    ├── select_spec.rb # this tests the queries you write in this file
     └── spec_helper.rb
 ```
 
