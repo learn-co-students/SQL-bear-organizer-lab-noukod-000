@@ -1,17 +1,8 @@
-INSERT INTO bears (id, name, age, gender, color, temperment, alive) VALUES 
-(1, "Mr. Chocolate", 20, "M", "chocolate brown", "goofy", 1), 
-(2, "Rowdy", 10, "M", "light brown", "rowdy", 1), 
-(3, "Downey", 12, "F", "beige", "gentle", 1), 
-(4, "Tabitha", 18, "F", "dark brown", "goofy", 0), 
-(5, "Sergeant Brown", 19, "M", "dark brown", "dominant", 1), 
-(6, "Melissa", 13, "F", "light brown", "territorial", 1), 
-(7, "Grinch", 2, "M", "chocolate brown", "agressive", 1), 
-(8, "Wendy", 23, "F", "beige", "gentle", 0), 
-(9, "Saturn", 25, "M", "auburn", "rowdy", 0), 
-(10, "Booble", 9, "M", "beige", "goofy", 1), 
-(11, "Ed", 8, "M", "dark brown", "gentle", 1), 
-(12, "Olie", 16, "M", "light brown", "goofy", 1), 
-(13, "Mickey", 10, "M", "dark brown", "dominant", 1), 
-(14, "Freckles", 5, "M", "dark brown", "territorial", 0), 
-(15, "Quincy", 26, "M", "auburn", "gentle", 1),
-(16, NULL, 20, "M", "dark brown", "agressive", 0);
+INSERT INTO bears VALUES (1,"Mr. Chocolate", 20, "M", "dark brown", "calm", 1);
+INSERT INTO bears VALUES (2,"Rowdy", 10, "M", "black", "intense", 1);
+INSERT INTO bears VALUES (3,"Tabitha", 6, "F", "dark brown", "Nice", 0);
+INSERT INTO bears VALUES (4,"Seargeant Brown", 19, "M", "Green", "Slimy", 1);
+INSERT INTO bears VALUES (5,"Melissa", 13, "F", "dark brown", "goofy", 1);
+INSERT INTO bears VALUES (6,"Grinch", 2, "M", "Black", "Grinchy", 1);
+INSERT INTO bears VALUES (7,"Wendy", 6, "F", "Blue", "naive", 0);
+INSERT INTO bears VALUES (8,null, 20, "M", "black", "aggressive", 0);
