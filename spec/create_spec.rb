@@ -1,4 +1,4 @@
-describe 'creating bears table' do 
+describe 'creating bears table' do
   before do
     @db = SQLite3::Database.new(':memory:')
     @sql_runner = SQLRunner.new(@db)
@@ -21,8 +21,8 @@ describe 'creating bears table' do
     expect{@db.execute("SELECT color FROM bears;")}.to_not raise_exception
   end
 
-  it "creates a bears table with a temperment field" do
-    expect{@db.execute("SELECT temperment FROM bears;")}.to_not raise_exception
+  it "creates a bears table with a temperament field" do
+    expect{@db.execute("SELECT temperament FROM bears;")}.to_not raise_exception
   end
 
   it "creates a bears table with an alive field" do

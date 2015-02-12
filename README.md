@@ -59,7 +59,7 @@ Your columns should be the following types:
 |age    |integer|
 |gender |char(1)(The choices would be "M" or "F")|
 |color  |text   |
-|temperment|text|
+|temperament|text|
 |alive  |boolean|
 
 Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determine what your insert values are going to be. Be sure to pay attention to how booleans are expressed in SQLite3.
@@ -70,19 +70,11 @@ Input the following 16 bears (you can make up details about them):
 
 * Mr. Chocolate 
 * Rowdy 
-* Downey 
 * Tabitha 
 * Sergeant Brown
 * Melissa 
 * Grinch
-* Wendy
-* Saturn
-* Booble
-* Ed 
-* Olie 
-* Mickey
-* Freckles 
-* Quincy 
+* Wendy 
 * unnamed (the bear that killed Tim didn't have a name; look up how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
