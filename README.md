@@ -66,7 +66,7 @@ Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determi
 
 ## Part 2: `INSERT`
 
-Input the following 16 bears (you can make up details about them):
+Input the following 8 bears (you can make up details about them):
 
 * Mr. Chocolate 
 * Rowdy 
