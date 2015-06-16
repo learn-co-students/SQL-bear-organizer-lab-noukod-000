@@ -11,7 +11,7 @@ Failures:
      Failure/Error: expect{@db.execute("SELECT name FROM bears;")}.to_not raise_exception
        expected no Exception, got #<SQLite3::SQLException: no such table: bears> with backtrace
 ```
-For the first test to pass we need to create a new bears table with the `name` attribute. But for the sake of time lets add all the attributes from the `README.md` (`id`, `name`, `age`, `gender`, `color`, `temperament` and `alive`).
+For the first test to pass we need to create a new bears table with the `name` attribute. But since we can see in the spec file (and in the readme) that many other attributes will be needed, lets add all of these now: `id`, `name`, `age`, `gender`, `color`, `temperament` and `alive`.
 
 ```ruby
 CREATE TABLE bears (
@@ -68,7 +68,7 @@ Failures:
      Failure/Error: expect(@db.execute('')).to eq([["Tabitha", 6],["Melissa", 13], ["Wendy", 6]])
 ```
 
-Enter following SQL-Query in your `selects_all_female_bears_return_name_and_age` method to select all of the female bears and returns their name and age
+Enter following SQL query in your `selects_all_female_bears_return_name_and_age` method to select all of the female bears and return their name and age:
 
 ```ruby
 "SELECT bears.name, bears.age FROM bears WHERE gender='F';"
@@ -79,7 +79,7 @@ The next error message is:
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
+  ...
   selects all of the bears names and orders them in alphabetical order (FAILED - 1)
 
 Failures:
@@ -88,7 +88,7 @@ Failures:
      Failure/Error: expect(@db.execute(selects_all_bears_names_and_orders_in_alphabetical_order )).to eq([[nil],["Grinch"],["Melissa"],["Mr. Chocolate"],["Rowdy"],["Sargeant Brown"],["Tabitha"],["Wendy"]])
 ```
 
-Enter following SQL-Query in your `selects_all_bears_names_and_orders_in_alphabetical_order` method to select all the bears names and to order them in alphabetical order
+Enter following SQL query in your `selects_all_bears_names_and_orders_in_alphabetical_order` method to select all the bears' names and order them alphabetically:
 
 ```ruby
 "SELECT bears.name FROM bears ORDER BY bears.name ASC;"
@@ -98,8 +98,7 @@ The third error message is:
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
-  selects all of the bears names and orders them in alphabetical order
+  ...
   selects all of the bears names and ages that are alive and order them from youngest to oldest (FAILED - 1)
 
 Failures:
@@ -107,7 +106,7 @@ Failures:
   1) querying the bears table selects all of the bears names and ages that are alive and order them from youngest to oldest
      Failure/Error: expect(@db.execute(selects_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest)).to eq([["Grinch", 2], ["Tabitha", 6], ["Wendy", 6], ["Rowdy", 10], ["Melissa", 13]])
 ```
-Enter following SQL-Query in your `selects_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest` method to select all the names and the ages of bears that are still alive and order them from youngest to oldest
+Enter following SQL query in your `selects_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest` method to select all the names and ages of bears that are still alive and order them from youngest to oldest:
 
 ```ruby
 "SELECT bears.name, bears.age FROM bears WHERE alive='TRUE' ORDER BY bears.age ASC;"
@@ -117,9 +116,7 @@ Your next test should be:
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
-  selects all of the bears names and orders them in alphabetical order
-  selects all of the bears names and ages that are alive and order them from youngest to oldest
+  ...
   selects the oldest bear and returns their name and age (FAILED - 1)
 
 Failures:
@@ -128,7 +125,7 @@ Failures:
      Failure/Error: expect(@db.execute(selects_oldest_bear_and_returns_name_and_age )).to eq([["Mr. Chocolate", 20]])
 ```
 
-Enter following SQL-Query in your `selects_oldest_bear_and_returns_name_and_age` method to select the oldest bear and return it's name and age
+Enter following SQL query  in your `selects_oldest_bear_and_returns_name_and_age` method to select the oldest bear and return its name and age:
 
 ```ruby
 "SELECT bears.name, bears.age FROM bears ORDER BY bears.age DESC LIMIT 1;"
@@ -138,10 +135,7 @@ The next error message is:
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
-  selects all of the bears names and orders them in alphabetical order
-  selects all of the bears names and ages that are alive and order them from youngest to oldest
-  selects the oldest bear and returns their name and age
+  ...
   selects the youngest bear and returns their name and age (FAILED - 1)
 
 Failures:
@@ -150,7 +144,7 @@ Failures:
      Failure/Error: expect(@db.execute(select_youngest_bear_and_returns_name_and_age )).to eq([["Grinch", 2]])
 ```
 
-Enter following SQL-Query in your `select_youngest_bear_and_returns_name_and_age` method to select the youngest bear and returns it's name and age
+Enter following SQL query in your `select_youngest_bear_and_returns_name_and_age` method to select the youngest bear and returns it's name and age
 
 ```ruby
 "SELECT bears.name, bears.age FROM bears ORDER BY bears.age ASC LIMIT 1;"
@@ -160,11 +154,7 @@ Next test:
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
-  selects all of the bears names and orders them in alphabetical order
-  selects all of the bears names and ages that are alive and order them from youngest to oldest
-  selects the oldest bear and returns their name and age
-  selects the youngest bear and returns their name and age
+  ...
   selects the most prominent color and returns it with its count (FAILED - 1)
   Failures:
 
@@ -172,7 +162,7 @@ querying the bears table
      Failure/Error: expect(@db.execute(selects_most_prominent_color_and_returns_with_count)).to eq([["dark brown", 3]])
 ```
 
-Enter following SQL-Query in your `selects_most_prominent_color_and_returns_with_count` method to select the most prominent color and to return it with its count
+Enter following SQL query in your `selects_most_prominent_color_and_returns_with_count` method to select the most prominent color and to return it with its count:
 
 ```ruby
 "SELECT bears.color, COUNT(bears.color) FROM bears GROUP BY bears.color ORDER BY COUNT(*) DESC LIMIT 1;"
@@ -180,12 +170,7 @@ Enter following SQL-Query in your `selects_most_prominent_color_and_returns_with
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
-  selects all of the bears names and orders them in alphabetical order
-  selects all of the bears names and ages that are alive and order them from youngest to oldest
-  selects the oldest bear and returns their name and age
-  selects the youngest bear and returns their name and age
-  selects the most prominent color and returns it with its count
+  ...
   counts the number of bears with goofy temperments (FAILED - 1)
 
 Failures:
@@ -194,7 +179,7 @@ Failures:
      Failure/Error: expect(@db.execute(counts_number_of_bears_with_goofy_temperments )).to eq([[1]])
 ```
 
-Enter following SQL-Query in your `counts_number_of_bears_with_goofy_temperments` method to count the number of bears with goofy temperments
+Enter following SQL query in your `counts_number_of_bears_with_goofy_temperments` method to count the number of bears with "goofy" temperments:
 
 ```ruby
 "SELECT COUNT(bears.temperament) FROM bears WHERE bears.temperament='goofy';"
@@ -203,13 +188,7 @@ Your last error in this lab is:
 
 ```ruby
 querying the bears table
-  selects all of the female bears and returns their name and age
-  selects all of the bears names and orders them in alphabetical order
-  selects all of the bears names and ages that are alive and order them from youngest to oldest
-  selects the oldest bear and returns their name and age
-  selects the youngest bear and returns their name and age
-  selects the most prominent color and returns it with its count
-  counts the number of bears with goofy temperments
+  ...
   selects the bear that killed Tim (FAILED - 1)
 
 Failures:
@@ -218,8 +197,9 @@ Failures:
      Failure/Error: expect(@db.execute(selects_bear_that_killed_Tim )).to eq([[8, nil, 20, "M", "black", "aggressive", "FALSE"]])
 ```
 
-Enter following SQL-Query in your `selects_bear_that_killed_Tim` method to select the bear that killed Tim
+Enter following SQL query in your `selects_bear_that_killed_Tim` method to select the bear that killed Tim:
 ```ruby
 "SELECT * FROM bears WHERE bears.name IS NULL;"
 ```
 
+Now all the tests should be passing!
