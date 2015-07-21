@@ -1,9 +1,3 @@
----
-tags: sql, introductory, select, insert, create
-languages: sql
-resources: 1
----
-
 # SQL Bear Organizer
 
 [Timothy Treadwell](http://en.wikipedia.org/wiki/Timothy_Treadwell) has a lot on his plate protecting the bears of the Katmai National Park in Alaska. Help him keep track of all of his bear friends using SQL.
