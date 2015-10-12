@@ -55,8 +55,8 @@ INSERT INTO bears VALUES (6,"Grinch", 2, "M", "Black", "Grinchy", 1);
 INSERT INTO bears VALUES (7,"Wendy", 12, "F", "Blue", "naive", 0);
 INSERT INTO bears VALUES (8,null, 20, "M", "black", "aggressive", 0);
 ```
-## spec/insert_spec.rb
-First error message for the `insert_spec.rb` is:
+## spec/select_spec.rb
+First error message for the `select_spec.rb` is:
 
 ```bash
 querying the bears table
