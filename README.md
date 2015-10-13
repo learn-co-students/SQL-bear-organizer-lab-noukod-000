@@ -33,7 +33,7 @@ This lab might seem a bit different than what you've seen before. Take a look at
 
 ### A Note on Testing
 
-In the `select_spec.rb` spec, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes. 
+In the `sql_queries.rb`, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes. 
 
 ## Part 1: `CREATE TABLE`
 
@@ -73,7 +73,7 @@ Input the following 8 bears (you can make up details about them):
 
 ## Part 3: `SELECT`
 
-Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above. Change the specs themselves (where there are empty quotes) to include your querying statements.
+Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above. Write your queries as strings in the `sql_queries.rb`.
 
 ## Resources
 
