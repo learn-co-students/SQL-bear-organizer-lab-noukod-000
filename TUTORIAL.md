@@ -109,7 +109,7 @@ Failures:
 Enter following SQL query in your `selects_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest` method to select all the names and ages of bears that are still alive and order them from youngest to oldest:
 
 ```sql
-"SELECT bears.name, bears.age FROM bears WHERE alive='TRUE' ORDER BY bears.age ASC;"
+"SELECT bears.name, bears.age FROM bears WHERE alive=1 ORDER BY bears.age ASC;"
 ```
 
 Your next test should be:
@@ -171,12 +171,12 @@ Enter following SQL query in your `selects_most_prominent_color_and_returns_with
 ```bash
 querying the bears table
   ...
-  counts the number of bears with goofy temperments (FAILED - 1)
+  counts the number of bears with goofy temperaments (FAILED - 1)
 
 Failures:
 
   1) querying the bears table counts the number of bears with goofy temperments
-     Failure/Error: expect(@db.execute(counts_number_of_bears_with_goofy_temperments )).to eq([[1]])
+     Failure/Error: expect(@db.execute(counts_number_of_bears_with_goofy_temperaments )).to eq([[1]])
 ```
 
 Enter following SQL query in your `counts_number_of_bears_with_goofy_temperments` method to count the number of bears with "goofy" temperments:
