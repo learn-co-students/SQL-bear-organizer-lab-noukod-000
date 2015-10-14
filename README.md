@@ -6,8 +6,9 @@
 
 ## Objectives
 
-1. Become familiar with creating tables with columns of various datatypes
-2. Learn to write complex and useful select queries
+1. Use the `CREATE TABLE` command to create a new table with various data types.
+2. Use the `INSERT INTO` command to insert data (i.e. rows) into a database table.
+3. Use the `SELECT` command with various functions and modifies to write queries.
 
 ## Lab Structure
 
@@ -60,7 +61,7 @@ Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determi
 
 ## Part 2: `INSERT`
 
-Input the following 8 bears (you can make up details about them):
+Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you can make up details about them):
 
 * Mr. Chocolate 
 * Rowdy 
@@ -69,7 +70,7 @@ Input the following 8 bears (you can make up details about them):
 * Melissa 
 * Grinch
 * Wendy 
-* unnamed (the bear that killed Tim didn't have a name; look up how to create a record that doesn't have one value)
+* unnamed (the bear that killed Tim didn't have a name; refer back to how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
 
