@@ -34,7 +34,17 @@ This lab might seem a bit different than what you've seen before. Take a look at
 
 ### A Note on Testing
 
-In the `sql_queries.rb`, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes. 
+Let's briefly go over what is happening in the `before` block that our tests will be using.
+
+```ruby
+before do
+  @db = SQLite3::Database.new(':memory:')
+  @sql_runner = SQLRunner.new(@db)
+  @sql_runner.execute_create_file
+end
+```
+Before each test, it creates a new in-memory database as well as a new instance of the SQLRunner class. The SQLRunner class lives in your `bin` directory and was created to help connect to the database. The code in your test suite can now run against your in-memory database, keeping it separate from you real database.
+You can learn more about in-memory databases <a href="https://www.sqlite.org/inmemorydb.html">here</a>.
 
 ## Part 1: `CREATE TABLE`
 
@@ -63,13 +73,13 @@ Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determi
 
 Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you can make up details about them):
 
-* Mr. Chocolate 
-* Rowdy 
-* Tabitha 
+* Mr. Chocolate
+* Rowdy
+* Tabitha
 * Sergeant Brown
-* Melissa 
+* Melissa
 * Grinch
-* Wendy 
+* Wendy
 * unnamed (the bear that killed Tim didn't have a name; refer back to how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
