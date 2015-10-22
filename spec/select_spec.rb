@@ -3,7 +3,7 @@ describe 'querying the bears table' do
     @db = SQLite3::Database.new(':memory:')
     @sql_runner = SQLRunner.new(@db)
     @sql_runner.execute_create_file
-    @sql_runner.execute_encoded_data
+    @sql_runner.execute_data
   end
   after do
     File.open('lib/sql', 'w'){ |f| f.truncate(0) }

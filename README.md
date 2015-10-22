@@ -26,7 +26,7 @@ This lab might seem a bit different than what you've seen before. Take a look at
 │   ├── decoded_data.sql # this file we're using to run the tests
 │   └── insert.sql # where you insert your data
 └── spec # all the specs
-    ├── create_spec.rb # this tests your creat.sql file
+    ├── create_spec.rb # this tests your create.sql file
     ├── insert_spec.rb # this tests your insert.sql file
     ├── select_spec.rb # this tests the queries you write in this file
     └── spec_helper.rb
@@ -34,7 +34,7 @@ This lab might seem a bit different than what you've seen before. Take a look at
 
 ### A Note on Testing
 
-In the `sql_queries.rb`, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes. 
+In the `sql_queries.rb`, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes.
 
 ## Part 1: `CREATE TABLE`
 
@@ -63,13 +63,13 @@ Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determi
 
 Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you can make up details about them):
 
-* Mr. Chocolate 
-* Rowdy 
-* Tabitha 
+* Mr. Chocolate
+* Rowdy
+* Tabitha
 * Sergeant Brown
-* Melissa 
+* Melissa
 * Grinch
-* Wendy 
+* Wendy
 * unnamed (the bear that killed Tim didn't have a name; refer back to how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
