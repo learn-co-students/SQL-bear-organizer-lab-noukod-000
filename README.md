@@ -43,8 +43,11 @@ before do
   @sql_runner.execute_create_file
 end
 ```
-Before each test, it creates a new in-memory database as well as a new instance of the SQLRunner class. The SQLRunner class lives in your `bin` directory and was created to help connect to the database. The code in your test suite can now run against your in-memory database, keeping it separate from you real database.
-You can learn more about in-memory databases <a href="https://www.sqlite.org/inmemorydb.html">here</a>.
+Before each test two important things happen.
+
+First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store those would be in their forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases <a href="https://www.sqlite.org/inmemorydb.html">here</a>.
+
+Next a new `sqlRunner` class is created. The `sqlRunner` class lives in your `bin` directory and was created to help connect to the database.
 
 ## Part 1: `CREATE TABLE`
 
