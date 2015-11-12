@@ -6,9 +6,9 @@
 
 ## Objectives
 
-1. Use the `CREATE TABLE` command to create a new table with various data types.
-2. Use the `INSERT INTO` command to insert data (i.e. rows) into a database table.
-3. Use the `SELECT` command with various functions and modifies to write queries.
+1. Use the `CREATE TABLE` command to create a new table with various data types
+2. Use the `INSERT INTO` command to insert data (i.e. rows) into a database table
+3. Use the `SELECT` command with various functions and modifiers to write queries
 
 ## Lab Structure
 
@@ -45,7 +45,7 @@ end
 ```
 Before each test two important things happen.
 
-First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases
+First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store, those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases
 [here](https://www.sqlite.org/inmemorydb.html).
 
 Next a new `sqlRunner` class is created. The `sqlRunner` class lives in your `bin` directory and was created to help connect to the database.
