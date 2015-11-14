@@ -1,1 +1,1 @@
-lib.* merge=theirs
+lib/* merge=theirs
