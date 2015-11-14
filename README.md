@@ -48,7 +48,7 @@ Before each test two important things happen.
 First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store, those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases
 [here](https://www.sqlite.org/inmemorydb.html).
 
-Next a new `sqlRunner` class is created. The `sqlRunner` class lives in your `bin` directory and was created to help connect to the database.
+Next a new `SqlRunner` class is created. The `SqlRunner` class lives in your `bin` directory and was created to help connect to the database.
 
 ## Part 1: `CREATE TABLE`
 
@@ -88,7 +88,7 @@ Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you
 
 ## Part 3: `SELECT`
 
-Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above. Write your queries as strings in the `sql_queries.rb`.
+Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data from the `lib/seed.sql` file so don't expect it to reflect the data you added above. Write your queries as strings in the `sql_queries.rb`.
 
 ## Resources
 
