@@ -6,9 +6,9 @@
 
 ## Objectives
 
-1. Use the `CREATE TABLE` command to create a new table with various data types.
-2. Use the `INSERT INTO` command to insert data (i.e. rows) into a database table.
-3. Use the `SELECT` command with various functions and modifies to write queries.
+1. Use the `CREATE TABLE` command to create a new table with various data types
+2. Use the `INSERT INTO` command to insert data (i.e. rows) into a database table
+3. Use the `SELECT` command with various functions and modifiers to write queries
 
 ## Lab Structure
 
@@ -26,7 +26,7 @@ This lab might seem a bit different than what you've seen before. Take a look at
 │   ├── decoded_data.sql # this file we're using to run the tests
 │   └── insert.sql # where you insert your data
 └── spec # all the specs
-    ├── create_spec.rb # this tests your creat.sql file
+    ├── create_spec.rb # this tests your create.sql file
     ├── insert_spec.rb # this tests your insert.sql file
     ├── select_spec.rb # this tests the queries you write in this file
     └── spec_helper.rb
@@ -34,7 +34,21 @@ This lab might seem a bit different than what you've seen before. Take a look at
 
 ### A Note on Testing
 
-In the `sql_queries.rb`, the select statements you write are being queried on the table you create in `create.sql`, but **not** on the data you've inserted via `insert.sql`. Instead it's on our own inserted data that's been encoded behind the scenes. 
+Let's briefly go over what is happening in the `before` block that our tests will be using.
+
+```ruby
+before do
+  @db = SQLite3::Database.new(':memory:')
+  @sql_runner = SQLRunner.new(@db)
+  @sql_runner.execute_create_file
+end
+```
+Before each test two important things happen.
+
+First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store, those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases
+[here](https://www.sqlite.org/inmemorydb.html).
+
+Next a new `SqlRunner` class is created. The `SqlRunner` class lives in your `bin` directory and was created to help connect to the database.
 
 ## Part 1: `CREATE TABLE`
 
@@ -63,18 +77,18 @@ Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determi
 
 Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you can make up details about them):
 
-* Mr. Chocolate 
-* Rowdy 
-* Tabitha 
+* Mr. Chocolate
+* Rowdy
+* Tabitha
 * Sergeant Brown
-* Melissa 
+* Melissa
 * Grinch
-* Wendy 
+* Wendy
 * unnamed (the bear that killed Tim didn't have a name; refer back to how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
 
-Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above. Write your queries as strings in the `sql_queries.rb`.
+Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data from the `lib/seed.sql` file so don't expect it to reflect the data you added above. Write your queries as strings in the `sql_queries.rb`.
 
 ## Resources
 
