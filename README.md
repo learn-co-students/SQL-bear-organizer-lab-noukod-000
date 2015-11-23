@@ -45,8 +45,7 @@ end
 ```
 Before each test two important things happen.
 
-First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store, those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases
-[here](https://www.sqlite.org/inmemorydb.html).
+First a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store, those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases [here](https://www.sqlite.org/inmemorydb.html).
 
 Next a new `SqlRunner` class is created. The `SqlRunner` class lives in your `bin` directory and was created to help connect to the database.
 
