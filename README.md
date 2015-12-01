@@ -25,6 +25,7 @@ This lab might seem a bit different than what you've seen before. Take a look at
 │   ├── create.sql # where you create your schema
 │   ├── decoded_data.sql # this file we're using to run the tests
 │   └── insert.sql # where you insert your data
+│   └── sql_queries.rb # where you write your sql queries
 └── spec # all the specs
     ├── create_spec.rb # this tests your create.sql file
     ├── insert_spec.rb # this tests your insert.sql file
@@ -87,7 +88,7 @@ Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you
 
 ## Part 3: `SELECT`
 
-Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data from the `lib/seed.sql` file so don't expect it to reflect the data you added above. Write your queries as strings in the `sql_queries.rb`.
+Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the database will be seeded with external data from the `lib/seed.sql` file so don't expect it to reflect the data you added above. Note: Since it's a Ruby file, write your queries as strings in the `lib/sql_queries.rb`.
 
 ## Resources
 
