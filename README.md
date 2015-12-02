@@ -93,3 +93,5 @@ Get the tests in `spec/select_spec.rb` to pass. Note that for this section, the 
 ## Resources
 
 [SQL Datatypes](http://www.w3schools.com/sql/sql_datatypes_general.asp)
+
+<a href='https://learn.co/lessons/SQL-bear-organizer-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
