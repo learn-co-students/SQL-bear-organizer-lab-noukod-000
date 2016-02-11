@@ -23,8 +23,8 @@ This lab might seem a bit different than what you've seen before. Take a look at
 │   └── sql_runner.rb # holds a class that handles executing your .sql files
 ├── lib
 │   ├── create.sql # where you create your schema
-│   ├── decoded_data.sql # this file we're using to run the tests
 │   └── insert.sql # where you insert your data
+│   └── seed.sql # data for in-memory database
 │   └── sql_queries.rb # where you write your sql queries
 └── spec # all the specs
     ├── create_spec.rb # this tests your create.sql file
